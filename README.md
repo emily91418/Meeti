@@ -49,38 +49,38 @@ Since we aren't sure when we will get message, we will need to set NSNotificatio
 Usage of NSNotification as the following    
 [NSNotification](http://stackoverflow.com/questions/2191594/send-and-receive-messages-through-nsnotificationcenter-in-objective-c)
 
-使用Meeti接收可參考sameple code  
+You can see sample code as a reference to use Meeti
 https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS  
 
 
-相關指令
+Related Commands
 *   MeetiFriendProfileChangeNotification:
 
-    > 當朋友的資訊被改變時，會發出通知
+    > Get notification when friend's information has been updated
 *   MeetiFriendImageChangeNotification:
 
-    > 當朋友的大頭圖被改變時，會發出通知
+    > Get notification when friend's profile picture has been updated
 *   MeetiGetMessageNotification:
 
-    > 群組內收到文字訊息的通知
+    > Get notification when a group get text message
 *   MeetiGetImageNotification:
 
-    > 群組內收到圖片的通知
+    > Get notification when a group get picture message
 
 *   MeetiGetGroupNotification:
 
-    > 收到群組的更新通知
+    > Get notification when a group has been updated
 *   MeetiFriendAddme:
 
-    > 有朋友加入我，會發出通知
+    > Get notification when a friend request is revieved
 
-# 如何使用  
+# How to Use  
 
-### 初始化 MeetiServer  (App_ID && APP_Key)
+### Initialize MeetiServer  (App_ID && APP_Key)
 ***
-MeetiServer 提供開發環境跟Meeti server溝通的函示．  
+MeetiServer Provides functions for development environment and connection with Meeti server．  
 
-第一次初始化Meeti Server 類別的函示  
+First time to use the object function of Meeti Server in a project, you need to initialize with the following code:  
 
 ```objective-c
 -(void)initWithAPPID:(NSString*)appID secretKey:(NSString*)secretKey  
