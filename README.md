@@ -16,23 +16,22 @@ Currently, we've provide two examples to developer to use as a reference
 - Apply for a testing account. You are welcome to email us to ask how
 
 
-## Things to pay attention
+## Things to Pay Attention for
 
-- While
-- 編譯時出現Link framework error訊息，請檢查Build setting -> framework search path是否有對應到framework檔案位置    
-- 使用Xcode6開發，且執行時出現以下訊息  
+- If you get Link framework error message while compiling, please check if Building setting -> framework search path is corresponding to framework's file path.  
+- User for Xcode6 and the following error message appear
 
 ```
 dyld: Library not loaded: @rpath/MeetiFramework.framework/MeetiFramework  
 ```
 
-請參考  
+please see  
 ![alt tag](https://cloud.githubusercontent.com/assets/1070832/5391832/a4d863bc-815a-11e4-870b-71bed7f95506.png)  
-## 聯絡我們  
+## Contact Us  
 
-- 如果需要任何幫助，可以聯絡我們 (us@mobagel.com)  
-- 如果您找到新的bug，可以建立新的issue.  
-- 如果您想要新增功能，可以建立新的issue.  
+- If you need any help, feel free to contact us (us@mobagel.com)  
+- If you find any new bug, you can create a new issue
+- If you want more functions, you can create a new issue
   
 ## API回傳值定義  
 
