@@ -42,11 +42,11 @@ Each API will all have the following return value. Exceptions will be explained 
 -  auth2_error : authentication error (ex: trying to send message to group A while you aren't in that group)
 -  timeout : exceed time limit  
   
-## 接收訊息通知 (NSNotification)
+## Get Notification (NSNotification)
 
-我們不確定何時會收到訊息，所以需要設定NSNotification去接收資料
+Since we aren't sure when we will get message, we will need to set NSNotification to get data/information  
 
-NSNotification的使用方法如下  
+Usage of NSNotification as the following    
 [NSNotification](http://stackoverflow.com/questions/2191594/send-and-receive-messages-through-nsnotificationcenter-in-objective-c)
 
 使用Meeti接收可參考sameple code  
