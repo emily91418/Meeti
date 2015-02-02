@@ -91,24 +91,24 @@ First time to use the object function of Meeti Server in a project, you need to 
 |     appID       | NSString | Provides product ID to developers|
 |     secretKey   | NSString |  Provide product key to developers|
 
-### 初始化 MeetiServer  (Userid && Password)
+### Initialize MeetiServer  (Userid && Password)
 ***
-MeetiServer 提供開發環境跟Meeti server溝通的函示．  
+MeetiServer Provides functions of development environemnt and connection of Meeti server．  
 
-初始化使用者帳號的函示  
+Function to initialize a user account    
 
 ```objective-c
 -(void)updateUserID:(NSString*)userid password:(NSString*)password
 ```
 
-| 參數名稱 |  參數型態 | 參數介紹  |
+| Parameter Name |  Parameter Type  | Parameter Introduction  |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     userid       | NSString | 提供給開發者的產品帳號|
-|     password   | NSString |  提供給開發者的產品密碼|
+|     userid       | NSString |  Provides product ID to developers|
+|     password   | NSString |   Provide product key to developers|
 
 
 
-### 新增群組
+### Add New Group
 ***
 在這個AppID內新增一個群組，初始人，管理員皆為創始人
 
