@@ -86,7 +86,7 @@ First time to use the object function of Meeti Server in a project, you need to 
 -(void)initWithAPPID:(NSString*)appID secretKey:(NSString*)secretKey  
 ```
 
-| Parameter Name |  Parameter Type | Parameter Introduce  |
+| Parameter Name |  Parameter Type | Parameter Introduction  |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     appID       | NSString | Provides product ID to developers|
 |     secretKey   | NSString |  Provide product key to developers|
@@ -110,7 +110,7 @@ Function to initialize a user account
 
 ### Add New Group
 ***
-在這個AppID內新增一個群組，初始人，管理員皆為創始人
+When creating a new group in a APPID, people who initialize and the admins are all founder of the group  
 
 ```objective-c
 -(void)setGroup:(NSString*)name
@@ -119,16 +119,16 @@ Function to initialize a user account
         fhandle:(MeetiRequestFailHandleCallBack)fhandle
             
 ```
-|     參數名稱    |  參數型態 |      參數介紹       |
+|     Parameter Name    |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     name       | NSString | 群組的命名名稱|
-|     type       | NSString | 群組的類型，目前提供頻道，公開，私人全組|
+|     name       | NSString | Group's Name |
+|     type       | NSString | Group's type. Currently we provide public and private channels|
 |     shandle   | Block  | Meeti Server新增群組回傳訊息|
 |     fhandle    | Block | Meeti Server新增群組失敗訊息|
 
 傳回  
 ```
-{ "groups": [ { "group_id": "app_public_02", "group_name": "公開群組2", "group_type": "1", "group_members": "auid123,guid123,guid223", "group_admins": "auid123" }, { "group_id": "app_public_01", "group_name": "公開群組1", "group_type": "1", "group_members": "auid323,auid333,guid112", "group_admins": "guid112,auid322" } ] }
+{ "groups": [ { "group_id": "app_public_02", "group_name": "PublicGroup2", "group_type": "1", "group_members": "auid123,guid123,guid223", "group_admins": "auid123" }, { "group_id": "app_public_01", "group_name": "PublicGroup1", "group_type": "1", "group_members": "auid323,auid333,guid112", "group_admins": "guid112,auid322" } ] }
 ```
 
 ### 取得群組
@@ -141,7 +141,7 @@ Function to initialize a user account
                fhandle:(MeetiRequestFailHandleCallBack)fhandle;
             
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     groups      | NSArray:NSString  | 取得特定群組|
 |     shandle     | Block| Meeti Server取得群組回傳訊息|
@@ -157,9 +157,9 @@ Function to initialize a user account
                shandle:(MeetiRequestHandleCallBack)shandle
                fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     UIDs        | NSArray:NSString  | 想要加進的群組人員id|
+|     UIDs        | NSArray:NSString  | ID of those people who wants to be in the group|
 |     gid         | NSString          | 需要加進的群組id|
 |     shandle     | Block| Meeti Server加入群組回傳訊息|
 |     fhandle     | Block| Meeti Server加入群組失敗訊息|
@@ -173,7 +173,7 @@ Function to initialize a user account
            shandle:(MeetiRequestHandleCallBack)shandle
            fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     gid         | NSString  | 要加進的群組id|
 |     shandle     | Block     | Meeti Server加入群組回傳訊息|
@@ -188,7 +188,7 @@ Function to initialize a user account
             shandle:(MeetiRequestHandleCallBack)shandle
             fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     gid         | NSString  | 要加進的群組id|
 |     shandle     | Block| Meeti Server離開群組回傳訊息|
@@ -204,7 +204,7 @@ Function to initialize a user account
           shandle:(MeetiRequestHandleCallBack)shandle
           fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     message     | NSString  |將要發送的訊息  |
 |     gid        | NSString  | 要將訊息發送到某群組|
@@ -222,7 +222,7 @@ Function to initialize a user account
                shandle:(MeetiRequestHandleCallBack)shandle
                fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     image     | UIImage  |將要發送的圖片  |
 |     gid        | NSString  | 要將圖片發送到某群組|
@@ -239,7 +239,7 @@ Function to initialize a user account
                  shandle:(MeetiRequestHandleCallBack)shandle
                  fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     gid        | NSString  |  從特定群組取得訊息|
 |     loadAll     | BOOL  | 是否要取得這個群組內所有訊息  |
@@ -266,7 +266,7 @@ Function to initialize a user account
           shandle:(MeetiRequestHandleCallBack)shandle
           fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     name        | NSString  |  個人資訊名稱|
 |     phone        | NSString  |  個人資訊電話|
@@ -286,7 +286,7 @@ Function to initialize a user account
                 shandle:(MeetiRequestHandleCallBack)shandle
                 fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     UIDs        | NSArray:NSString  |  要取得的使用者id|
 |     shandle     | Block| Meeti Server取得個人資訊回傳訊息|
@@ -306,7 +306,7 @@ Function to initialize a user account
                 shandle:(MeetiRequestHandleCallBack)shandle
                 fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
-|     參數名稱     |  參數型態  |      參數介紹       |
+|    Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     keywords        | NSArray:NSString  | 要搜尋的關鍵字名稱 |
 |     shandle     | Block| Meeti Server取得個人資訊回傳訊息|
@@ -327,7 +327,7 @@ Function to initialize a user account
                  fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     pic        | UIImage  | 要設定的大頭圖圖片 |
 |     shandle     | Block| Meeti Server設定個人圖片資訊回傳訊息|
@@ -344,7 +344,7 @@ Function to initialize a user account
                            fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     UID        | NSString  | 要取得大頭圖圖片的使用者 |
 |     path        | NSString  | 要儲存在哪個路徑 |
@@ -361,7 +361,7 @@ Function to initialize a user account
                      fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     withProfile        | BOOL  |  是否要包含Profile資訊 |
 |     shandle     | Block| Meeti Server取得朋友資訊回傳訊息|
@@ -375,7 +375,7 @@ Function to initialize a user account
                   fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     uids        | NSArray:NSString  |  將要加入的使用者id |
 |     shandle     | Block| Meeti Server加入朋友回成功傳訊息|
@@ -389,7 +389,7 @@ Function to initialize a user account
       fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     uid        |  NSString  |  要追蹤的使用者id |
 |     shandle     | Block| Meeti Server追蹤成功回傳訊息|
@@ -403,7 +403,7 @@ Function to initialize a user account
         fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     uid        |  NSString  |  要取消追蹤的使用者id |
 |     shandle     | Block| Meeti Server取消追蹤成功回傳訊息|
@@ -417,7 +417,7 @@ Function to initialize a user account
          fhandle:(MeetiRequestFailHandleCallBack)fhandle
 ```
 
-|     參數名稱     |  參數型態  |      參數介紹       |
+|     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     shandle     | Block| Meeti Server取得列表回傳訊息|
 |     fhandle     | Block| Meeti Server取得列表失敗訊息|
