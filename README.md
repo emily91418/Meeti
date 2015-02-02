@@ -56,10 +56,10 @@ https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS
 Related Commands
 *   MeetiFriendProfileChangeNotification:
 
-    > Get notification when friend's information has been updated
+    > Get notification when a friend's information has been updated
 *   MeetiFriendImageChangeNotification:
 
-    > Get notification when friend's profile picture has been updated
+    > Get notification when a friend's profile picture has been updated
 *   MeetiGetMessageNotification:
 
     > Get notification when a group get text message
@@ -86,10 +86,10 @@ First time to use the object function of Meeti Server in a project, you need to 
 -(void)initWithAPPID:(NSString*)appID secretKey:(NSString*)secretKey  
 ```
 
-| 參數名稱 |  參數型態 | 參數介紹  |
+| Parameter Name |  Parameter Type | Parameter Introduce  |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     appID       | NSString | 提供給開發者的產品ID|
-|     secretKey   | NSString |  提供給開發者的產品密鑰|
+|     appID       | NSString | Provides product ID to developers|
+|     secretKey   | NSString |  Provide product key to developers|
 
 ### 初始化 MeetiServer  (Userid && Password)
 ***
