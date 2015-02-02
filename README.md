@@ -1,24 +1,24 @@
 MeetiFramework
 ==============
 
-MeetiFramework provides developers to use  Meeti API產出雲端連線服務的 APP  
-MeetiFramework 提供開發者們使用 Meeti API產出雲端連線服務的 APP  
+MeetiFramework provides developers to use Meeti API create service with cloud APP  
 
 
-目前我們提供兩個範本給開發者參考  
-1. [網路即時聊天室](https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS)  
-2. [遙控車操控](https://github.com/MOBAGEL/Meeti-Remote-control-car-example-iOS)  
+Currently, we've provide two examples to developer to use as a reference
+1. [instant chatroom online](https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS)  
+2. [remote car controller](https://github.com/MOBAGEL/Meeti-Remote-control-car-example-iOS)  
 
 
-## 開始第一步  
+## Step One  
 
-- 下載 MeetiFramework 並加入到您現有的iPhone專案   
-- 申請App_ID 及 APP_SecretKey ( http://meeti.ex.mobagel.com/admin/login.php ) ，並加入到現有的iPhone專案中  
-- 申請測試帳號，可來信詢問如何申請
+- Download MeetiFramework and add it to your existing iphone project
+- Apply for App_ID and APP_SecretKey (http://meeti.ex.mobagel.com/admin/login.php ) and add it to your existing iphone project
+- Apply for a testing account. You are welcome to email us to ask how
 
 
-## 開發注意
+## Things to pay attention
 
+- While
 - 編譯時出現Link framework error訊息，請檢查Build setting -> framework search path是否有對應到framework檔案位置    
 - 使用Xcode6開發，且執行時出現以下訊息  
 
