@@ -4,8 +4,8 @@ MeetiFramework
 MeetiFramework provides developers to use Meeti API create service with cloud APP  
 
 
-Currently, we've provide two examples to developer to use as a reference
-1. [instant chatroom online](https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS)  
+Currently, we've provide two examples to developer to use as a reference  
+1. [instant chatroom online](https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS)    
 2. [remote car controller](https://github.com/MOBAGEL/Meeti-Remote-control-car-example-iOS)  
 
 
