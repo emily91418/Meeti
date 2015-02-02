@@ -33,14 +33,14 @@ please see
 - If you find any new bug, you can create a new issue
 - If you want more functions, you can create a new issue
   
-## API回傳值定義  
+## API Return Value 
 
-每一個API都會回傳以下值,若有特殊回傳值將會在以下個別說明
--  ok : api正確執行  
--  input_error : 輸入參數有錯誤  
--  auth_error : 認證錯誤(token失效)  
--  auth2_error : 使用api的權限錯誤(ex:不在group A 卻使用set_group修改groupA)  
--  timeout : 超過時間  
+Each API will all have the following return value. Exceptions will be explained individually later.
+-  ok : API execute correctly  
+-  input_error : enter the wrong parameter  
+-  auth_error : authentication error (token invalid; ex: trying to be another person that isn't you)  
+-  auth2_error : authentication error (ex: trying to send message to group A while you aren't in that group)
+-  timeout : exceed time limit  
   
 ## 接收訊息通知 (NSNotification)
 
