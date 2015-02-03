@@ -308,7 +308,7 @@ Get a specific personal information by using keyword search
 ```
 |    Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     keywords        | NSArray:NSString  | the keyword wish to be searched |
+|     keywords        | NSArray:NSString  | The keyword wish to be searched |
 |     shandle     | Block| Message of successfully getting personal information by searching the keywords that Meeti Server replys|
 |     fhandle     | Block| Message of failure to get the personal information by searching the keywords that Meeti Server replys|
 
@@ -329,7 +329,7 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     pic        | UIImage  | the image that wish to be set as profile picture |
+|     pic        | UIImage  | The image that wish to be set as profile picture |
 |     shandle     | Block| Message of succesfully setting the personal profile picture that Meeti Server replys|
 |     fhandle     | Block| Message of failure to set the personal profile picture that Meeti Server replys|
 
@@ -346,8 +346,8 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     UID        | NSString  | the user id whom you wish to get their profile picture |
-|     path        | NSString  | the path that you wish to save the image to |
+|     UID        | NSString  | The user ID whom you wish to get their profile picture |
+|     path        | NSString  | The path that you wish to save the image to |
 |     shandle     | Block| Message of successfully getting the profile picture of the specific person by their ID that Meeti Server replys|
 |     fhandle     | Block| Message of failure to get the profile picture of the specific person by their ID that Meeti Server replys|
 
@@ -363,9 +363,9 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     withProfile        | BOOL  |  是否要包含Profile資訊 |
-|     shandle     | Block| Meeti Server取得朋友資訊回傳訊息|
-|     fhandle     | Block| failure of adding to group message that Meeti Server replys|
+|     withProfile        | BOOL  |  Whether or not to include the profile's information |
+|     shandle     | Block| Message of successfully getiing your friend list that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get your friend list that Meeti Server replys|
 
 ### Add Friends
 ***
@@ -377,9 +377,9 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     uids        | NSArray:NSString  |  將要加入的使用者id |
-|     shandle     | Block| Meeti Server加入朋友回成功傳訊息|
-|     fhandle     | Block| Meeti Server加入朋友失敗訊息|
+|     uids        | NSArray:NSString  |  The user ID that you wish to add as a friend |
+|     shandle     | Block| Message of successfully adding the friend that Meeti Server replys|
+|     fhandle     | Block| Message of failure to add the friend taht Meeti Server replys|
 
 ### Follow a Specific User
 ***
@@ -391,9 +391,9 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     uid        |  NSString  |  Follow specific user id |
-|     shandle     | Block| Meeti Server追蹤成功回傳訊息|
-|     fhandle     | Block| Meeti Server追蹤失敗訊息|
+|     uid        |  NSString  |  Follow specific user ID |
+|     shandle     | Block| Message of successfully following the user that Meeti Server replys|
+|     fhandle     | Block| Message of failure to follow the user that Meeti Server replys|
 
 ### Unfollow a Specific User
 ***
@@ -405,9 +405,9 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     uid        |  NSString  |  Unfollow specific user id |
-|     shandle     | Block| Meeti Server取消追蹤成功回傳訊息|
-|     fhandle     | Block| Meeti Server取消追蹤失敗訊息|
+|     uid        |  NSString  |  Unfollow specific user ID |
+|     shandle     | Block| Message of successfully unfollowing the user that Meeti Server replys|
+|     fhandle     | Block| Message of failure to unfollow the user that Meeti Server replys|
 
 
 ### Get the list of the people who you are following
@@ -419,8 +419,8 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     shandle     | Block| Meeti Server取得列表回傳訊息|
-|     fhandle     | Block| Meeti Server取得列表失敗訊息|
+|     shandle     | Block| Message of successfully getting the list of people you are following that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get the list of people you are following that Meeti Server replys|
 傳回：  
 ```
 { "followers": [ "auid112", "auid222", "guid123" ], "following": [ "auid133", "auid222", "guid133" ] }
