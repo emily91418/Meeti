@@ -254,7 +254,7 @@ Get messages from a specific group at a specific time
 
 ### Set Personal Profile
 ***
-Setting the personal information. The function getprofile can 設定個人資訊，要取得可以用getprofile函示拿到
+Setting the personal information (You can get the profile by using the function "getprofile") 
 
 ```objective-c
 -(void)setProfile:(NSString*)name
@@ -319,7 +319,7 @@ Get a specific personal information by using keyword search
 
 ### Set Personal Profile Picture
 ***
-取得特定人員的資訊，使用關鍵字搜尋
+Set a personal profile picture
 
 ```objective-c
 -(void)setProfilePicture:(UIImage*)pic
@@ -352,7 +352,7 @@ Get a specific personal information by using keyword search
 |     fhandle     | Block| Meeti Server取得圖片資訊失敗訊息|
 
 
-### Get 取得自己的朋友
+### Get Your Friend List 
 ***
 
 ```objective-c
@@ -367,7 +367,7 @@ Get a specific personal information by using keyword search
 |     shandle     | Block| Meeti Server取得朋友資訊回傳訊息|
 |     fhandle     | Block| Meeti Server取得朋友資訊失敗訊息|
 
-### 加入朋友
+### Add Friends
 ***
 ```objective-c
 -(void)addFriendByUIDs:(NSArray *)uids
@@ -381,7 +381,7 @@ Get a specific personal information by using keyword search
 |     shandle     | Block| Meeti Server加入朋友回成功傳訊息|
 |     fhandle     | Block| Meeti Server加入朋友失敗訊息|
 
-### 追蹤某個使用者
+### Follow a Specific User
 ***
 ```objective-c
 -(void)follow:(NSString*)uid
@@ -395,7 +395,7 @@ Get a specific personal information by using keyword search
 |     shandle     | Block| Meeti Server追蹤成功回傳訊息|
 |     fhandle     | Block| Meeti Server追蹤失敗訊息|
 
-### 取消追蹤某個使用者
+### Unfollow a Specific User
 ***
 ```objective-c
 -(void)unfollow:(NSString*)uid
@@ -410,7 +410,7 @@ Get a specific personal information by using keyword search
 |     fhandle     | Block| Meeti Server取消追蹤失敗訊息|
 
 
-### 取得追蹤的人列表
+### Get the list of the people who you are following
 ***
 ```objective-c
 -(void)getFollow:(MeetiRequestHandleCallBack)shandle
