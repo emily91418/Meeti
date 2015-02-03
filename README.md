@@ -143,13 +143,13 @@ When creating a new group in a APPID, people who initialize and the admins are a
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     groups      | NSArray:NSString  | 取得特定群組|
-|     shandle     | Block| Meeti Server取得群組回傳訊息|
-|     fhandle     | Block| Meeti Server取得群組失敗訊息|
+|     groups      | NSArray:NSString  | get a specific group|
+|     shandle     | Block| Meeti Server get a reply message from a group|
+|     fhandle     | Block| Meeti Server get an error of sending the message from a group|
 
-### 加入群組(Add)
+### Adding People to Group(Add)
 ***
-將某個特定人加進群組  (加人必須要有管理員權限)
+Add a specific person into a group (only admin can add people to groups)  
 
 ```objective-c
 -(void)addGroupMembers:(NSArray*)UIDs
@@ -164,9 +164,9 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |     shandle     | Block| Meeti Server加入群組回傳訊息|
 |     fhandle     | Block| Meeti Server加入群組失敗訊息|
 
-### 加入群組(Join)
+### Join a Group(Join)
 ***
-加入群組  (加入的群組必須為公開群組 or 頻道)
+Join a group (the group has to be a public group/channel)
 
 ```objective-c
 -(void)joinToGroup:(NSString*)gid
@@ -179,9 +179,9 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |     shandle     | Block     | Meeti Server加入群組回傳訊息|
 |     fhandle     | Block     | Meeti Server加入群組失敗訊息|
 
-### 離開群組
+### Leave the Group
 ***
-離開群組
+Leave a group
 
 ```objective-c
 -(void)leaveToGroup:(NSString*)gid
@@ -194,9 +194,9 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |     shandle     | Block| Meeti Server離開群組回傳訊息|
 |     fhandle     | Block| Meeti Server離開群組失敗訊息|
 
-### 發送文字訊息
+### Send a text message
 ***
-傳送訊息至群組（發送訊息前必須要在群組內）
+Send a message to group (has to be in the group before sending it)
 
 ```objective-c
 -(void)setMessage:(NSString*)message
@@ -212,9 +212,9 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |     fhandle     | Block| Meeti Server發送訊息失敗訊息|
 
 
-### 發送圖片訊息
+### Send a picture message
 ***
-傳送圖片至群組（發送圖片前必須要在群組內）
+Send a picture message to a group (has to be in the group before sending it)
 
 ```objective-c
 -(void)setImageMessage:(UIImage*)image
@@ -229,9 +229,9 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |     shandle     | Block| Meeti Server發送訊息回傳訊息|
 |     fhandle     | Block| Meeti Server發送訊息失敗訊息|
 
-### 取得訊息
+### Get messages
 ***
-從特定群組中取得某個時間點的訊息
+Get 從特定群組中取得某個時間點的訊息
 
 ```objective-c
 -(void)getMessageWithGid:(NSString*)gid
