@@ -231,7 +231,7 @@ Send a picture message to a group (has to be in the group before sending it)
 
 ### Get messages
 ***
-Get 從特定群組中取得某個時間點的訊息
+Get messages from a specific group at a specific time
 
 ```objective-c
 -(void)getMessageWithGid:(NSString*)gid
@@ -252,9 +252,9 @@ Get 從特定群組中取得某個時間點的訊息
 ```
 
 
-### 設定個人資訊
+### Set Personal Profile
 ***
-設定個人資訊，要取得可以用getprofile函示拿到
+Setting the personal information. The function getprofile can 設定個人資訊，要取得可以用getprofile函示拿到
 
 ```objective-c
 -(void)setProfile:(NSString*)name
@@ -277,9 +277,9 @@ Get 從特定群組中取得某個時間點的訊息
 |     shandle     | Block| Meeti Server設定個人資訊回傳訊息|
 |     fhandle     | Block| Meeti Server設定個人資訊失敗訊息|
 
-### 取得個人資訊(使用者id)
+### Get Personal Information (User ID)
 ***
-取得特定人員的資訊，使用使用者id搜尋
+Get a specific personal information by searching the ID
 
 ```objective-c
 -(void)getProfileByUIDs:(NSArray *)UIDs
@@ -292,14 +292,14 @@ Get 從特定群組中取得某個時間點的訊息
 |     shandle     | Block| Meeti Server取得個人資訊回傳訊息|
 |     fhandle     | Block| Meeti Server取得個人資訊失敗訊息|
 
-傳回  
+Return  
 ```
 { "profiles": [ { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid123", "person_name": "勤奮的演員", "person_keyword": "", "person_searchable": "0", "person_phone": "" }, { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid222", "person_name": "喜歡貝果的臺北人", "person_keyword": "", "person_searchable": "0", "person_phone": "" } ] }
 ```
 
-### 取得個人資訊(關鍵字)
+### Get Personal Information (Keyword)
 ***
-取得特定人員的資訊，使用關鍵字搜尋
+Get a specific personal information by using keyword search
 
 ```objective-c
 -(void)getProfileByKeywords:(NSArray *)keywords
@@ -317,7 +317,7 @@ Get 從特定群組中取得某個時間點的訊息
 { "profiles": [ { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid123", "person_name": "勤奮的演員", "person_keyword": "", "person_searchable": "0", "person_phone": "" }, { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid222", "person_name": "喜歡貝果的臺北人", "person_keyword": "", "person_searchable": "0", "person_phone": "" } ] }
 ```
 
-### 設定個人的大頭圖
+### Set Personal Profile Picture
 ***
 取得特定人員的資訊，使用關鍵字搜尋
 
@@ -334,7 +334,7 @@ Get 從特定群組中取得某個時間點的訊息
 |     fhandle     | Block| Meeti Server設定個人圖片資訊失敗訊息|
 
 
-### 取得特定人員的大頭圖
+### Get Specific Person Profile Picture
 ***
 
 ```objective-c
@@ -352,7 +352,7 @@ Get 從特定群組中取得某個時間點的訊息
 |     fhandle     | Block| Meeti Server取得圖片資訊失敗訊息|
 
 
-### 取得自己的朋友
+### Get 取得自己的朋友
 ***
 
 ```objective-c
