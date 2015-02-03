@@ -225,7 +225,7 @@ Send a picture message to a group (has to be in the group before sending it)
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     image     | UIImage  | The image that is wish to be sent  |
-|     gid        | NSString  | 要將圖片發送到某群組|
+|     gid        | NSString  |The group's ID that you wish to send the image to|
 |     shandle     | Block| Message of successfully sending a picture to a group that Meeti Server replys|
 |     fhandle     | Block| Message of failure to send a picture to a group that Meeti Server replys|
 
@@ -274,8 +274,8 @@ Setting the personal information (You can get the profile by using the function 
 |     companyPhone        | NSString  |  Company's phone number|
 |     description        | NSString  |  Personal detail information|
 |     searchKeywords        | NSArray:NSString  |  keywords that can be referred to|
-|     shandle     | Block| Meeti Server設定個人資訊回傳訊息|
-|     fhandle     | Block| failure of adding to group message that Meeti Server replys|
+|     shandle     | Block| Message of successfully setting the personal profile information that Meeti Server replys|
+|     fhandle     | Block| Message of failure to set the personal profile information that Meeti Server replys|
 
 ### Get Personal Information (User ID)
 ***
