@@ -123,17 +123,17 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     name       | NSString | Group's Name |
 |     type       | NSString | Group's type. Currently we provide public and private channels|
-|     shandle   | Block  | Meeti Server新增群組回傳訊息|
-|     fhandle    | Block | Meeti Server新增群組失敗訊息|
+|     shandle   | Block  | Message of successfully adding to the group that Meeti Server replys|
+|     fhandle    | Block | Message of failure to add to the group that Meeti Server replys|
 
 傳回  
 ```
 { "groups": [ { "group_id": "app_public_02", "group_name": "PublicGroup2", "group_type": "1", "group_members": "auid123,guid123,guid223", "group_admins": "auid123" }, { "group_id": "app_public_01", "group_name": "PublicGroup1", "group_type": "1", "group_members": "auid323,auid333,guid112", "group_admins": "guid112,auid322" } ] }
 ```
 
-### 取得群組
+### Get Group
 ***
-取得這個APP ID 內某些特定群組
+Get certian groups' IDs in this APP
 
 ```objective-c
 -(void)getGroupWithGid:(NSArray*)groups
@@ -143,9 +143,9 @@ When creating a new group in a APPID, people who initialize and the admins are a
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     groups      | NSArray:NSString  | get a specific group|
-|     shandle     | Block| Meeti Server get a reply message from a group|
-|     fhandle     | Block| Meeti Server get an error of sending the message from a group|
+|     groups      | NSArray:NSString  | Get a specific group|
+|     shandle     | Block| Message of successfully getting the group's ID that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get the group's ID that Meeti Server replys|
 
 ### Adding People to Group(Add)
 ***
@@ -160,9 +160,9 @@ Add a specific person into a group (only admin can add people to groups)
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     UIDs        | NSArray:NSString  | ID of those people who wants to be in the group|
-|     gid         | NSString          | 需要加進的群組id|
-|     shandle     | Block| Meeti Server加入群組回傳訊息|
-|     fhandle     | Block| Meeti Server加入群組失敗訊息|
+|     gid         | NSString          | ID of the group wish to be added to|
+|     shandle     | Block| Message of successfully adding people to the group that Meeti Server replys|
+|     fhandle     | Block| Message of failure to add people to the group message that Meeti Server replys|
 
 ### Join a Group(Join)
 ***
@@ -175,9 +175,9 @@ Join a group (the group has to be a public group/channel)
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     gid         | NSString  | 要加進的群組id|
-|     shandle     | Block     | Meeti Server加入群組回傳訊息|
-|     fhandle     | Block     | Meeti Server加入群組失敗訊息|
+|     gid         | NSString  | ID of the group wish to be added to|
+|     shandle     | Block     | Message of successfully joining to the group that Meeti Server replys|
+|     fhandle     | Block     | Message of failure to join the group message that Meeti Server replys|
 
 ### Leave the Group
 ***
@@ -190,9 +190,9 @@ Leave a group
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     gid         | NSString  | 要加進的群組id|
-|     shandle     | Block| Meeti Server離開群組回傳訊息|
-|     fhandle     | Block| Meeti Server離開群組失敗訊息|
+|     gid         | NSString  | ID of the group wish to leave|
+|     shandle     | Block| Message of successfully leaving the group that Meeti Server replys|
+|     fhandle     | Block| Message of failure to leave the group that Meeti Server replys|
 
 ### Send a text message
 ***
@@ -206,10 +206,10 @@ Send a message to group (has to be in the group before sending it)
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     message     | NSString  |將要發送的訊息  |
-|     gid        | NSString  | 要將訊息發送到某群組|
-|     shandle     | Block| Meeti Server發送訊息回傳訊息|
-|     fhandle     | Block| Meeti Server發送訊息失敗訊息|
+|     message     | NSString  | The message wish to be sent  |
+|     gid        | NSString  |  The groups ID that you wish to send the message to|
+|     shandle     | Block| Message of successfully sending a text message to a group that Meeti Server replys|
+|     fhandle     | Block| Message of failure to send a text message to group that Meeti Server replys|
 
 
 ### Send a picture message
@@ -224,10 +224,10 @@ Send a picture message to a group (has to be in the group before sending it)
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     image     | UIImage  |將要發送的圖片  |
+|     image     | UIImage  | The image that is wish to be sent  |
 |     gid        | NSString  | 要將圖片發送到某群組|
-|     shandle     | Block| Meeti Server發送訊息回傳訊息|
-|     fhandle     | Block| Meeti Server發送訊息失敗訊息|
+|     shandle     | Block| Message of successfully sending a picture to a group that Meeti Server replys|
+|     fhandle     | Block| Message of failure to send a picture to a group that Meeti Server replys|
 
 ### Get messages
 ***
@@ -241,10 +241,10 @@ Get messages from a specific group at a specific time
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     gid        | NSString  |  從特定群組取得訊息|
-|     loadAll     | BOOL  | 是否要取得這個群組內所有訊息  |
-|     shandle     | Block| Meeti Server取得訊息回傳訊息|
-|     fhandle     | Block| Meeti Server取得訊息失敗訊息|
+|     gid        | NSString  |  Get the messages from a specific group|
+|     loadAll     | BOOL  | Whether or not to get all the messages from the group  |
+|     shandle     | Block| Message of successfully getting the messages from a specific group that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get the messages from a specific group that Meeti Server replys|
 
 傳回:  
 ```
@@ -268,14 +268,14 @@ Setting the personal information (You can get the profile by using the function 
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     name        | NSString  |  個人資訊名稱|
-|     phone        | NSString  |  個人資訊電話|
-|     company        | NSString  |  個人資訊公司名稱|
-|     companyPhone        | NSString  |  個人資訊公司電話|
-|     description        | NSString  |  個人詳細資訊|
-|     searchKeywords        | NSArray:NSString  |  可以被搜尋找到的keywords|
+|     name        | NSString  |  Name|
+|     phone        | NSString  |  Phone|
+|     company        | NSString  |  Company's name|
+|     companyPhone        | NSString  |  Company's phone number|
+|     description        | NSString  |  Personal detail information|
+|     searchKeywords        | NSArray:NSString  |  keywords that can be referred to|
 |     shandle     | Block| Meeti Server設定個人資訊回傳訊息|
-|     fhandle     | Block| Meeti Server設定個人資訊失敗訊息|
+|     fhandle     | Block| failure of adding to group message that Meeti Server replys|
 
 ### Get Personal Information (User ID)
 ***
@@ -288,13 +288,13 @@ Get a specific personal information by searching the ID
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     UIDs        | NSArray:NSString  |  要取得的使用者id|
-|     shandle     | Block| Meeti Server取得個人資訊回傳訊息|
-|     fhandle     | Block| Meeti Server取得個人資訊失敗訊息|
+|     UIDs        | NSArray:NSString  |  Get the user ID|
+|     shandle     | Block| Message of successfully getting the personal information by searching the ID that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get the personal information by searching the ID that Meeti Server replys|
 
 Return  
 ```
-{ "profiles": [ { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid123", "person_name": "勤奮的演員", "person_keyword": "", "person_searchable": "0", "person_phone": "" }, { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid222", "person_name": "喜歡貝果的臺北人", "person_keyword": "", "person_searchable": "0", "person_phone": "" } ] }
+{ "profiles": [ { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid123", "person_name": "hard_working_actor", "person_keyword": "", "person_searchable": "0", "person_phone": "" }, { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid222", "person_name": "People_That_Lives_in_Taipei_Who_Likes_Bagel", "person_keyword": "", "person_searchable": "0", "person_phone": "" } ] }
 ```
 
 ### Get Personal Information (Keyword)
@@ -308,13 +308,13 @@ Get a specific personal information by using keyword search
 ```
 |    Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     keywords        | NSArray:NSString  | 要搜尋的關鍵字名稱 |
-|     shandle     | Block| Meeti Server取得個人資訊回傳訊息|
-|     fhandle     | Block| Meeti Server取得個人資訊失敗訊息|
+|     keywords        | NSArray:NSString  | the keyword wish to be searched |
+|     shandle     | Block| Message of successfully getting personal information by searching the keywords that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get the personal information by searching the keywords that Meeti Server replys|
 
 傳回  
 ```
-{ "profiles": [ { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid123", "person_name": "勤奮的演員", "person_keyword": "", "person_searchable": "0", "person_phone": "" }, { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid222", "person_name": "喜歡貝果的臺北人", "person_keyword": "", "person_searchable": "0", "person_phone": "" } ] }
+{ "profiles": [ { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid123", "person_name": "hard_working_actor", "person_keyword": "", "person_searchable": "0", "person_phone": "" }, { "person_company": "", "person_notify": 1, "person_companyphone": "", "person_email": "auid222", "person_name": "People_That_Lives_in_Taipei_Who_Likes_Bagel", "person_keyword": "", "person_searchable": "0", "person_phone": "" } ] }
 ```
 
 ### Set Personal Profile Picture
@@ -329,9 +329,9 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     pic        | UIImage  | 要設定的大頭圖圖片 |
-|     shandle     | Block| Meeti Server設定個人圖片資訊回傳訊息|
-|     fhandle     | Block| Meeti Server設定個人圖片資訊失敗訊息|
+|     pic        | UIImage  | the image that wish to be set as profile picture |
+|     shandle     | Block| Message of succesfully setting the personal profile picture that Meeti Server replys|
+|     fhandle     | Block| Message of failure to set the personal profile picture that Meeti Server replys|
 
 
 ### Get Specific Person Profile Picture
@@ -346,10 +346,10 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     UID        | NSString  | 要取得大頭圖圖片的使用者 |
-|     path        | NSString  | 要儲存在哪個路徑 |
-|     shandle     | Block| Meeti Server取得圖片資訊回傳訊息|
-|     fhandle     | Block| Meeti Server取得圖片資訊失敗訊息|
+|     UID        | NSString  | the user id whom you wish to get their profile picture |
+|     path        | NSString  | the path that you wish to save the image to |
+|     shandle     | Block| Message of successfully getting the profile picture of the specific person by their ID that Meeti Server replys|
+|     fhandle     | Block| Message of failure to get the profile picture of the specific person by their ID that Meeti Server replys|
 
 
 ### Get Your Friend List 
@@ -365,7 +365,7 @@ Set a personal profile picture
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     withProfile        | BOOL  |  是否要包含Profile資訊 |
 |     shandle     | Block| Meeti Server取得朋友資訊回傳訊息|
-|     fhandle     | Block| Meeti Server取得朋友資訊失敗訊息|
+|     fhandle     | Block| failure of adding to group message that Meeti Server replys|
 
 ### Add Friends
 ***
@@ -391,7 +391,7 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     uid        |  NSString  |  要追蹤的使用者id |
+|     uid        |  NSString  |  Follow specific user id |
 |     shandle     | Block| Meeti Server追蹤成功回傳訊息|
 |     fhandle     | Block| Meeti Server追蹤失敗訊息|
 
@@ -405,7 +405,7 @@ Set a personal profile picture
 
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     uid        |  NSString  |  要取消追蹤的使用者id |
+|     uid        |  NSString  |  Unfollow specific user id |
 |     shandle     | Block| Meeti Server取消追蹤成功回傳訊息|
 |     fhandle     | Block| Meeti Server取消追蹤失敗訊息|
 
