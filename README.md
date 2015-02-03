@@ -273,7 +273,7 @@ Setting the personal information (You can get the profile by using the function 
 |     company        | NSString  |  Company's name|
 |     companyPhone        | NSString  |  Company's phone number|
 |     description        | NSString  |  Personal detail information|
-|     searchKeywords        | NSArray:NSString  |  keywords that can be referred to|
+|     searchKeywords        | NSArray:NSString  |  Keywords that can be referred to|
 |     shandle     | Block| Message of successfully setting the personal profile information that Meeti Server replys|
 |     fhandle     | Block| Message of failure to set the personal profile information that Meeti Server replys|
 
