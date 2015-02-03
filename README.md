@@ -421,21 +421,21 @@ Set a personal profile picture
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     shandle     | Block| Message of successfully getting the list of people you are following that Meeti Server replys|
 |     fhandle     | Block| Message of failure to get the list of people you are following that Meeti Server replys|
-傳回：  
+Return:   
 ```
 { "followers": [ "auid112", "auid222", "guid123" ], "following": [ "auid133", "auid222", "guid133" ] }
 ```
 
-### 設定推播的token  
+### Setting of Push Notification's token  
 ***
-目前不支援
+Not supported at the moment. 
 
 
 ### 新增待辦事項
 ***
-目前不支援
+Not supported at the moment. 
 
 
 ### 取得待辦事項的列表
 ***
-目前不支援
+Not supported at the moment. 
