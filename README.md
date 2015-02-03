@@ -16,7 +16,7 @@ Currently, we've provide two examples to developer to use as a reference
 - Apply for a testing account. You are welcome to email us to ask how
 
 
-## Things to Pay Attention for
+## Things to Pay Attention to
 
 - If you get Link framework error message while compiling, please check if Building setting -> framework search path is corresponding to framework's file path.  
 - User for Xcode6 and the following error message appear
