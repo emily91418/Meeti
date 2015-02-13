@@ -1,10 +1,10 @@
 MeetiFramework
 ==============
 
-MeetiFramework provides developers to use Meeti API create service with cloud APP  
+MeetiFramework provides developers to use Meeti API creating service with cloud APP  
 
 
-Currently, we've provide two examples to developer to use as a reference  
+Currently, we've provide two examples to developers to use as a reference  
 1. [instant chatroom online](https://github.com/MOBAGEL/Meeti-Chatroom-example-iOS)    
 2. [remote car controller](https://github.com/MOBAGEL/Meeti-Remote-control-car-example-iOS)  
 
@@ -37,14 +37,14 @@ please see
 
 Each API will all have the following return value. Exceptions will be explained individually later.
 -  ok : API execute correctly  
--  input_error : enter the wrong parameter  
+-  input_error : enter the wrong parameter(s)  
 -  auth_error : authentication error (token invalid; ex: trying to be another person that isn't you)  
 -  auth2_error : authentication error (ex: trying to send message to group A while you aren't in that group)
 -  timeout : exceed time limit  
   
 ## Get Notification (NSNotification)
 
-Since we aren't sure when we will get message, we will need to set NSNotification to get data/information  
+Since we aren't sure when we will get message(s), we will need to set NSNotification to get data/information  
 
 Usage of NSNotification as the following    
 [NSNotification](http://stackoverflow.com/questions/2191594/send-and-receive-messages-through-nsnotificationcenter-in-objective-c)
@@ -62,10 +62,10 @@ Related Commands
     > Get notification when a friend's profile picture has been updated
 *   MeetiGetMessageNotification:
 
-    > Get notification when a group get text message
+    > Get notification when a group get text message(s)
 *   MeetiGetImageNotification:
 
-    > Get notification when a group get picture message
+    > Get notification when a group get picture message(s)
 
 *   MeetiGetGroupNotification:
 
@@ -104,13 +104,13 @@ Function to initialize a user account
 | Parameter Name |  Parameter Type  | Parameter Introduction  |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     userid       | NSString |  Provides product ID to developers|
-|     password   | NSString |   Provide product key to developers|
+|     password   | NSString |   Provides product key to developers|
 
 
 
 ### Add New Group
 ***
-When creating a new group in a APPID, people who initialize and the admins are all founder of the group  
+When creating a new group in a APPID, people who initialize it and the admins are all founder of the group  
 
 ```objective-c
 -(void)setGroup:(NSString*)name
@@ -123,8 +123,8 @@ When creating a new group in a APPID, people who initialize and the admins are a
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     name       | NSString | Group's Name |
 |     type       | NSString | Group's type. Currently we provide public and private channels|
-|     shandle   | Block  | Message of successfully adding to the group that Meeti Server replys|
-|     fhandle    | Block | Message of failure to add to the group that Meeti Server replys|
+|     shandle   | Block  | Message of successfully adding to the group that Meeti Server replies|
+|     fhandle    | Block | Message of failure to add to the group that Meeti Server replies|
 
 傳回  
 ```
@@ -144,8 +144,8 @@ Get certian groups' IDs in this APP
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
 |     groups      | NSArray:NSString  | Get a specific group|
-|     shandle     | Block| Message of successfully getting the group's ID that Meeti Server replys|
-|     fhandle     | Block| Message of failure to get the group's ID that Meeti Server replys|
+|     shandle     | Block| Message of successfully getting the group's ID that Meeti Server replies|
+|     fhandle     | Block| Message of failure to get the group's ID that Meeti Server replies|
 
 ### Adding People to Group(Add)
 ***
@@ -159,11 +159,11 @@ Add a specific person into a group (only admin can add people to groups)
 ```
 |     Parameter Name     |  Parameter Type  |      Parameter Introduction       |
 |:-----------------------------------:|:-----------------------------------:|:---------------------------------------------:|
-|     UIDs        | NSArray:NSString  | ID of those people who wants to be in the group|
-|     gid         | NSString          | ID of the group wish to be added to|
-|     shandle     | Block| Message of successfully adding people to the group that Meeti Server replys|
-|     fhandle     | Block| Message of failure to add people to the group message that Meeti Server replys|
-
+|     UIDs        | NSArray:NSString  | ID of those people who want to be in the group|
+|     gid         | NSString          | ID of the group that wish to be added to|
+|     shandle     | Block| Message of successfully adding people to the group that Meeti Server replies|
+|     fhandle     | Block| Message of failure to add people to the group message that Meeti Server replies|
+-----我是分隔線，等等再改------
 ### Join a Group(Join)
 ***
 Join a group (the group has to be a public group/channel)
